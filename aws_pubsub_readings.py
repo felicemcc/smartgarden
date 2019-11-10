@@ -1,7 +1,6 @@
 # Import SDK packages
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
-import serial
-from rpi_lcd import LCD
+import serial from rpi_lcd import LCD
 from time import sleep
 
 # Get serial to fetch data from arduino
@@ -15,7 +14,7 @@ def customCallback(client, userdata, message):
 	print(message.topic)
 	print("--------------\n\n")
 	
-host = "YOUR HOST NAME"
+host = "arn:aws:iot:us-west-2:757945522262:thing/SmartWaterfall"
 rootCAPath = "rootca.pem"
 certificatePath = "certificate.pem.crt"
 privateKeyPath = "private.pem.key"
